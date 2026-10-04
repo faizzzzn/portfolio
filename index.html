@@ -238,6 +238,7 @@
     .echoes-v4 .spread{margin:0 0 5rem;background:var(--echo-paper2);border:1px solid #e4dcc9;box-shadow:0 24px 60px -34px rgba(27,27,27,.25)}
     .echoes-v4 .spread img{width:100%;display:block}
     .echoes-v4 .mock{margin:0 0 5rem}.echoes-v4 .mock img{width:100%;display:block;border:1px solid #141414;box-shadow:0 30px 70px -30px rgba(27,27,27,.5)}
+    .echoes-v4 .v4-flipbook{padding:0 0 7rem}.echoes-v4 .v4-flipbook iframe{display:block;width:100%;height:min(80vh,760px);min-height:560px;border:1px solid #141414;background:#1b1b1b}
     .echoes-v4 .specs{border:1px solid #e4dcc9;background:var(--echo-paper2)}.echoes-v4 .specs .row{display:grid;grid-template-columns:170px 1fr;gap:1rem;padding:1.25rem 1.6rem;border-bottom:1px solid #e4dcc9;font-size:1.02rem;font-weight:500;line-height:1.55;color:#24221e}.echoes-v4 .specs .row:last-child{border-bottom:0}.echoes-v4 .specs .k{font:500 .7rem/1.55 "IBM Plex Mono",monospace;letter-spacing:.18em;color:#c20e61}
     .echoes-v4 .v4-footer{background:var(--echo-ink);color:var(--echo-paper);padding:5rem 0 2.5rem;margin-top:2rem}.echoes-v4 .v4-footer .big{font:900 clamp(2.6rem,8vw,6rem)/1 "Bodoni Moda",Didot,serif;background:linear-gradient(100deg,#ff3b94,#ff9a3c 40%,#9a6ee8 75%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 1.4rem}.echoes-v4 .v4-footer p{color:#ded7c9;font-size:1rem;font-weight:500;max-width:54em;line-height:1.8;margin-top:0}.echoes-v4 .v4-footer .sec-no{color:#d0c8ba}.echoes-v4 .v4-footer .copyright{margin-top:2.4rem;font:500 .7rem/1.55 "IBM Plex Mono",monospace;letter-spacing:.16em;color:#d0c8ba;text-transform:uppercase}
     @media(max-width:900px){.echoes-comp .tcp-title .meta{grid-template-columns:1fr 1fr}.echoes-comp .tcp-title .meta-cell:nth-child(odd){border-left:0}.echoes-v4 .v4-section-grid{grid-template-columns:190px minmax(0,1fr);gap:26px}.echoes-v4 .facts{grid-template-columns:1fr}.echoes-v4 .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -1434,17 +1435,8 @@ Mount: Batten / pendant retrofit</p></div></div>
       </div>
     </div></section>
 
-    <section><div class="v4-section-grid">
-      <div class="v4-side"><p class="sec-no"><span class="n">07</span> — SPECIFICATION</p><h2>The fine <em>print.</em></h2></div>
-      <div class="v4-content"><div class="specs">
-        <div class="row"><span class="k">FORMAT</span><span>8 pages · 8 × 8 in trim · 3 mm bleed</span></div>
-        <div class="row"><span class="k">PRINT</span><span>300 dpi · CMYK print-ready PDF</span></div>
-        <div class="row"><span class="k">WORDS</span><span>14 real quotations, attributed in text · none invented</span></div>
-        <div class="row"><span class="k">IMAGES</span><span>Public-domain archival photographs · psychedelic duotone</span></div>
-        <div class="row"><span class="k">TYPE</span><span>Bodoni Moda · Source Serif 4 · IBM Plex Mono</span></div>
-        <div class="row"><span class="k">RULES</span><span>No price · no spec sheet on the pages — the object speaks</span></div>
-      </div></div>
-    </div></section></div>
+    <section class="v4-flipbook"><iframe src="https://heyzine.com/flip-book/d4c9488567.html" title="ECHOES magazine flip-book" loading="lazy" allowfullscreen></iframe></section>
+  </div>
 
     <hr class="v4-band">
     <footer class="v4-footer"><div class="v4-wrap"><p class="sec-no"><span class="n">COLOPHON</span></p><p class="big">ECHOES</p><p>Designed and built by Faizan Haidri, 2026. Set in Bodoni Moda, Source Serif 4 and IBM Plex Mono. Photographs via public archives; quotations from published interviews 1967–2025, credited in text. ECHOES is an independent editorial tribute, not affiliated with Pink Floyd or its members.</p><p class="copyright">© Faizan. All rights reserved.</p></div></footer>
@@ -1616,16 +1608,16 @@ Service access</div><div class="prose"><p>Software cannot fix the queue if the o
     ];
     var list=document.getElementById('projectList'),moreList=document.getElementById('moreProjectList');
     var frontProjects=[
-      {index:4,title:'TCP : Hearing aid dehumidifier',image:'assets/img-048.jpg'},
-      {index:2,title:'eNAV',image:'assets/img-277.jpg'},
-      {index:1,title:'Replica of a single bolt action',image:'assets/img-274.jpg',pending:true},
-      {index:0,title:'The Silver Gaunt',image:'assets/img-273.jpg'},
-      {index:5,no:'06',title:'ECHOES',image:'assets/img-114.jpg',blurb:'A print magazine about Pink Floyd\'s psychedelic years — eight square pages where white light splits into colour.'},
-      {index:3,title:'Underroot',image:'assets/img-275.jpg',pending:true},
+      {index:4,no:'01',title:'TCP : Hearing aid dehumidifier',image:'assets/img-048.jpg'},
+      {index:2,no:'02',title:'eNAV',image:'assets/img-277.jpg'},
+      {index:1,no:'03',title:'Replica of a single bolt action',image:'assets/img-274.jpg',pending:true},
+      {index:0,no:'04',title:'The Silver Gaunt',image:'assets/img-273.jpg'},
+      {index:5,no:'05',title:'ECHOES',image:'assets/img-114.jpg',blurb:'A print magazine about Pink Floyd\'s psychedelic years — eight square pages where white light splits into colour.'},
+      {index:3,no:'06',title:'Underroot',image:'assets/img-275.jpg',pending:true},
       {index:6,no:'07',title:'PUSH / CLICK : Universal Bulb Holder',image:'assets/img-111.jpg',blurb:'One holder, one gesture — push to lock, push again to release. Ends the B22 twist and E27 screw split.'},
       {index:7,no:'08',title:'KAAM',image:'assets/img-276.jpg',blurb:'Direct hire for India’s informal workforce — portable trust across a public kiosk and hirer app.'}
     ];
-    frontProjects.forEach(function(item,i){var a=document.createElement('article'),p=projects[item.index];a.className='project reveal'+(item.pending?' pending':'');a.setAttribute('data-project',item.index);if(item.pending){a.setAttribute('aria-label',p.title+' — in progress');a.setAttribute('aria-disabled','true')}else{a.tabIndex=0;a.setAttribute('aria-label','Open '+p.title)}a.innerHTML='<span class="project-no">' + '0' + (item.index + 1) + '</span><div class="project-visual"><img src="'+item.image+'" alt="'+item.title+' project image" loading="lazy"></div><div class="project-info"><h3>'+item.title+'</h3><p'+(item.blurb?' class="blurb"':'')+'>'+(item.blurb||'National Institute of design')+'</p>'+(item.pending?'<span class="project-status">IN PROGRESS</span>':'<button class="project-link" type="button">EXPLORE CASE STUDY</button>')+'</div>';if(item.pending){a.addEventListener('mouseenter',function(){document.body.classList.add('pending-project-hover')});a.addEventListener('mouseleave',function(){document.body.classList.remove('pending-project-hover')})}else{a.addEventListener('click',function(){openCase(item.index)});a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(item.index)}})}(i<5?list:moreList).appendChild(a)});
+    frontProjects.forEach(function(item,i){var a=document.createElement('article'),p=projects[item.index];a.className='project reveal'+(item.pending?' pending':'');a.setAttribute('data-project',item.index);if(item.pending){a.setAttribute('aria-label',p.title+' — in progress');a.setAttribute('aria-disabled','true')}else{a.tabIndex=0;a.setAttribute('aria-label','Open '+p.title)}a.innerHTML='<span class="project-no">' + (item.no || ('0' + (item.index + 1))) + '</span><div class="project-visual"><img src="'+item.image+'" alt="'+item.title+' project image" loading="lazy"></div><div class="project-info"><h3>'+item.title+'</h3><p'+(item.blurb?' class="blurb"':'')+'>'+(item.blurb||'National Institute of design')+'</p>'+(item.pending?'<span class="project-status">IN PROGRESS</span>':'<button class="project-link" type="button">EXPLORE CASE STUDY</button>')+'</div>';if(item.pending){a.addEventListener('mouseenter',function(){document.body.classList.add('pending-project-hover')});a.addEventListener('mouseleave',function(){document.body.classList.remove('pending-project-hover')})}else{a.addEventListener('click',function(){openCase(item.index)});a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(item.index)}})}(i<5?list:moreList).appendChild(a)});
     var moreToggle=document.getElementById('moreProjectsOpen');
     function setMoreProjects(open){moreList.hidden=!open;moreToggle.setAttribute('aria-expanded',String(open));moreToggle.querySelector('.mp-label').textContent=open?'Show Less':'More Projects';moreToggle.querySelector('.mp-icon').textContent=open?'\u2212':'+';if(open)window.dispatchEvent(new Event('resize'))}
     if(!moreList.children.length){moreToggle.parentElement.style.display='none'}else{moreToggle.addEventListener('click',function(){setMoreProjects(moreList.hidden)})}
