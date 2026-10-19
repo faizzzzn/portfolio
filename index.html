@@ -459,15 +459,57 @@
   </style>
 
   <style id="tokri-case">
-    .tokri-finale{background:#0b0b0a;border-radius:18px;color:#f3efe8;margin-top:72px}
-    .tokri-finale .wrap{padding:56px max(20px,4vw)}
-    .tokri-finale .chapter-head{border-top-color:rgba(255,255,255,.2)}
-    .tokri-finale .chapter-head h2{color:#f3efe8}
-    .tokri-finale .chapter-no{color:#8c8882}
-    .tokri-finale .prose p{color:#c9c3b9}
-    .tokri-finale .pdf-image-block{background:#171715;margin-bottom:8px}
-    .tokri-finale .pdf-image-block figcaption{background:#141413;color:#8c8882}
-    @media(max-width:760px){.tokri-finale{border-radius:12px}.tokri-finale .wrap{padding:40px 18px}}
+    .tokri-figma{background:#f2f0ec;color:#11110f;font-family:Manrope,sans-serif;overflow:hidden}
+    .tokri-figma .tf-wrap{max-width:1440px;margin:0 auto;padding-left:58px;padding-right:58px}
+    .tokri-figma figure{margin:0}
+    .tokri-figma img{display:block;width:100%;height:auto}
+    .tf-hero{background:#080808;color:#f4f0e9;padding:110px 0 60px}
+    .tf-kicker{margin:0 0 22px;font:400 11px/1.4 "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase;color:#d92d24}
+    .tf-h1{margin:0;font-size:clamp(72px,8.4vw,120px);font-weight:500;letter-spacing:-.08em;line-height:.88;color:#f4f0e9}
+    .tf-h1 span{display:block}
+    .tf-h1 .red{color:#d92d24}
+    .tf-lede{margin:30px 0 0;max-width:720px;font-size:20px;line-height:1.5;letter-spacing:-.01em;color:#c9c3b9}
+    .tf-meta{margin:26px 0 0;font:400 10px/1.5 "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#8c8882}
+    .tf-herofig{margin:44px 0 0}
+    .tf-herofig img{height:min(720px,62vw);object-fit:cover}
+    .tf-cap{margin:0;padding:10px 0 0;font:400 9px/1.5 "DM Mono",monospace;letter-spacing:.065em;text-transform:uppercase;color:#6f6a62}
+    .tf-ch{padding:96px 0 8px}
+    .tf-no{margin:0 0 14px;font:400 9px/1 "DM Mono",monospace;letter-spacing:.075em;text-transform:uppercase;color:#66635e}
+    .tf-h2{margin:0 0 30px;font-size:clamp(36px,4vw,56px);font-weight:500;letter-spacing:-.06em;line-height:1;color:#11110f}
+    .tf-copy{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;margin:0 0 44px}
+    .tf-fact{margin:0;font:400 9px/1.7 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#68655f}
+    .tf-body p{margin:0;font-size:22px;line-height:1.38;letter-spacing:-.01em;color:#11110f;max-width:920px}
+    .tf-body p+p{margin-top:18px}
+    .tf-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+    .tf-trio figure,.tf-duo figure{background:#dedcd5;overflow:hidden}
+    .tf-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 8px}
+    .tf-single{margin:0 0 8px;max-width:660px}
+    .tf-single img{width:100%;height:auto;display:block}
+    .tf-trio-cap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 8px}
+    .tf-trio-cap .tf-cap{padding-top:10px}
+    .tf-ch .tf-cap{color:#68655f;margin-bottom:8px}
+    .tf-ch .tf-cap.blk{color:#000}
+    .tf-finale{background:#080808;color:#f4f0e9;padding:96px 0 60px;margin-top:96px}
+    .tf-finale .tf-no{color:#8c8882}
+    .tf-finale .tf-h2{color:#f4f0e9}
+    .tf-finale .tf-fact{color:#8c8882}
+    .tf-finale .tf-body p{color:#e8e2d8}
+    .tf-finale .tf-duo figure{background:#171715}
+    .tf-finale .tf-cap{color:#6f6a62}
+    .tf-wide{margin:26px 0 0}
+    .tf-outdoor{margin:26px 0 0;max-width:485px}
+    .tf-foot{background:#080808;color:#f3efe8;border-top:1px solid rgba(255,255,255,.14);padding:34px 0 44px}
+    .tf-foot .tf-wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .tf-foot p{margin:0;font:400 10px/1.6 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#8c8882}
+    .tf-foot .tf-wm{font-size:28px;font-weight:500;letter-spacing:-.05em;color:#f3efe8;text-transform:none}
+    @media(max-width:760px){
+      .tokri-figma .tf-wrap{padding-left:18px;padding-right:18px}
+      .tf-hero{padding:80px 0 44px}
+      .tf-copy{grid-template-columns:1fr;gap:14px}
+      .tf-trio,.tf-duo{grid-template-columns:1fr}
+      .tf-body p{font-size:18px}
+      .tf-outdoor{max-width:none}
+    }
   </style>
 </head>
 <body id="top">
@@ -490,7 +532,7 @@
     <section class="what" id="work">
       <div class="section-top reveal"><div class="kicker">WHAT I DO</div></div>
       <div class="flow-list">
-        <article class="flow-row reveal"><span class="num">01</span><h3>Design &amp; Prototyping</h3><p>Figma, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe Premiere Pro.</p></article>
+        <article class="flow-row reveal"><span class="num">01</span><h3>Design &amp; Prototyping</h3><p>Figma, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe Lightroom.</p></article>
         <article class="flow-row reveal"><span class="num">02</span><h3>Technical &amp; 3D Tools</h3><p>AutoCAD, SolidWorks, Fusion 360, Blender, KeyShot 3D.</p></article>
         <article class="flow-row reveal"><span class="num">03</span><h3>UX &amp; Interaction</h3><p>Interaction Design, UX &amp; UI Design, Visual Design, Usability Testing, Information Architecture, UX Research, Mobile &amp; Web Design, Design Systems.</p></article>
         <article class="flow-row reveal"><span class="num">04</span><h3>Methods &amp; Workflow</h3><p>Rapid Prototyping, Design Thinking, Data-Driven Design, AI-Assisted Workflow.</p></article>
@@ -578,9 +620,9 @@ Mount: Batten / pendant retrofit</p></div></div>
       <h1>The Silver Gaunt</h1>
       <p class="tagline">ARTICULATED METAL GAUNTLET — <em>JOINT STUDIES, SHEET-FORM TRIALS, PHYSICAL ASSEMBLY</em></p>
       <div class="meta">
-        <div class="meta-cell"><div class="meta-label">Project</div><div class="meta-value">01</div></div>
+        <div class="meta-cell"><div class="meta-label">Project</div><div class="meta-value">05</div></div>
         <div class="meta-cell"><div class="meta-label">Discipline</div><div class="meta-value">Wearable metal craft</div></div>
-        <div class="meta-cell"><div class="meta-label">Year</div><div class="meta-value">2026</div></div>
+        <div class="meta-cell"><div class="meta-label">Year</div><div class="meta-value">2023</div></div>
         <div class="meta-cell"><div class="meta-label">Format</div><div class="meta-value">Research × build compilation</div></div>
         <div class="meta-cell"><div class="meta-label">Material</div><div class="meta-value">Sheet metal</div></div>
         <div class="meta-cell"><div class="meta-label">Designer</div><div class="meta-value">Faizan Haidri</div></div>
@@ -1750,75 +1792,79 @@ Service access</div><div class="prose"><p>Software cannot fix the queue if the o
     </footer>
   </div></template>
 
-  <template id="tokriTemplate"><div class="tcp-comp">
+  <template id="tokriTemplate"><div class="tokri-figma">
 
-  <div class="tcp-title">
-    <span class="kicker">PROJECT 09 · OBJECT STUDY</span>
-    <h1>Tokri Lamp</h1>
-    <p class="tagline">A bamboo basket, a dead branch and a wood offcut walk into a room. Nobody bought anything. <em>This is what came out.</em></p>
-    <div class="meta">
-      <div class="meta-cell"><div class="meta-label">Materials</div><div class="meta-value">Woven bamboo tokri, fallen branch, wood offcut — plus jute rope, steel chain, bulb holder and wire</div></div>
-      <div class="meta-cell"><div class="meta-label">Finish</div><div class="meta-value">One dark wood stain across every part</div></div>
-      <div class="meta-cell"><div class="meta-label">Build</div><div class="meta-value">Hand-built, 2026. Branch planted in the base — no brackets, no visible hardware</div></div>
+  <section class="tf-hero"><div class="tf-wrap">
+    <p class="tf-kicker">Object study — 2026</p>
+    <h1 class="tf-h1"><span>Tokri</span><span class="red">Lamp</span></h1>
+    <p class="tf-lede">A bamboo basket, a dead branch and a wood offcut walk into a room. Nobody bought anything. This is what came out.</p>
+    <p class="tf-meta">Bamboo · Branch · Wood&ensp;—&ensp;Found materials&ensp;—&ensp;Built by hand</p>
+    <figure class="tf-herofig"><img src="assets/img-179.jpg" alt="The Tokri Lamp lit in a warm room" loading="lazy"><figcaption class="tf-cap">The lamp, lit — light escaping through the weave</figcaption></figure>
+  </div></section>
+
+  <section class="tf-ch"><div class="tf-wrap">
+    <p class="tf-no">01 — Idea</p>
+    <h2 class="tf-h2">Found, not bought</h2>
+    <div class="tf-copy">
+      <p class="tf-fact">Brief to self<br>Make a lamp from<br>what&rsquo;s lying around</p>
+      <div class="tf-body"><p>The shade is a bamboo tokri — the kind every Indian kitchen has had for generations. The stand is a branch picked up off the ground. The base is a wood offcut. Nothing was ordered, nothing was 3D-printed. The whole project is an exercise in seeing objects before they become products: the basket already knew how to be a shade, it just didn&rsquo;t know it yet.</p></div>
     </div>
-    <figure class="hero-plate"><img src="assets/img-179.jpg" alt="The Tokri Lamp glowing in a dark room" loading="lazy"></figure>
-  </div>
-
-  <section class="chapter"><div class="wrap">
-    <div class="chapter-head"><span class="chapter-no">Chapter 01</span><h2>Found, not bought</h2></div>
-    <div class="case-copy"><div class="prose">
-      <p>The shade is a bamboo tokri — the kind every Indian kitchen has had for generations. The stand is a branch picked up off the ground. The base is a wood offcut. Nothing was ordered, nothing was 3D-printed.</p>
-      <p>The whole project is an exercise in seeing objects before they become products: the basket already knew how to be a shade, it just didn't know it yet.</p>
-    </div></div>
-    <figure class="pdf-image-block"><img src="assets/img-180.jpg" alt="The three raw materials laid out — tokri, wood disc, branch" loading="lazy"><figcaption>The starting point — tokri, wood disc, branch. Nothing else.</figcaption></figure>
-  </div></section>
-
-  <section class="chapter"><div class="wrap">
-    <div class="chapter-head"><span class="chapter-no">Chapter 02</span><h2>Three materials, one language</h2></div>
-    <div class="case-copy"><div class="prose">
-      <p>Each part brings its own logic. The tokri is pure rhythm — thin slats woven over and under, strong because of the pattern, not the material. The branch is the opposite: no pattern at all, just whatever the tree decided, knots and all. The disc is the quiet one, a clean circle to stand everything on.</p>
-      <p>My job was mostly to not ruin what each of them already does well.</p>
-    </div></div>
-    <div class="trio">
-      <figure><img src="assets/img-181.jpg" alt="The raw woven bamboo basket" loading="lazy"><figcaption>The tokri — woven slats, strong by pattern</figcaption></figure>
-      <figure><img src="assets/img-182.jpg" alt="The found tree branch" loading="lazy"><figcaption>The branch — no pattern, just the tree's decisions</figcaption></figure>
-      <figure><img src="assets/img-183.jpg" alt="The round wood offcut" loading="lazy"><figcaption>The disc — a clean circle to stand on</figcaption></figure>
+    <div class="tf-trio">
+      <figure><img src="assets/img-180.jpg" alt="Woven bamboo basket" loading="lazy"></figure>
+      <figure><img src="assets/img-181.jpg" alt="Found tree branch" loading="lazy"></figure>
+      <figure><img src="assets/img-182.jpg" alt="Round wood offcut" loading="lazy"></figure>
     </div>
+    <p class="tf-cap">The starting point — tokri, wood disc, branch. Nothing else.</p>
   </div></section>
 
-  <section class="chapter"><div class="wrap">
-    <div class="chapter-head"><span class="chapter-no">Chapter 03</span><h2>Stain</h2></div>
-    <div class="case-copy"><div class="prose">
-      <p>Everything got the same dark stain — basket, branch, base. It does two jobs at once: it kills the craft-fair look of raw bamboo, and it makes three unrelated materials read as one designed object.</p>
-      <p>Finish as translator. The weave keeps its texture; it just stops shouting about being a basket.</p>
-    </div></div>
-    <figure class="pdf-image-block"><img src="assets/img-184.jpg" alt="The basket and branch after dark staining" loading="lazy"><figcaption>After staining — one colour, one object</figcaption></figure>
-  </div></section>
-
-  <section class="chapter"><div class="wrap">
-    <div class="chapter-head"><span class="chapter-no">Chapter 04</span><h2>Assembly</h2></div>
-    <div class="case-copy"><div class="prose">
-      <p>The branch is planted straight into the base disc — no brackets, nothing showing. The shade hangs off the branch's side arm: first on a steel chain, which looked too industrial, then on jute rope, which looked right.</p>
-      <p>A bulb holder, a wire run down the branch, and it's a lamp. Every decision was about hiding the new parts and showing the found ones.</p>
-    </div></div>
-    <div class="trio">
-      <figure><img src="assets/img-185.jpg" alt="Shade hanging from the branch on a chain" loading="lazy"><figcaption>First hang — steel chain, later swapped for jute</figcaption></figure>
-      <figure><img src="assets/img-186.jpg" alt="Assembly from another angle" loading="lazy"><figcaption>Finding the balance point on the side arm</figcaption></figure>
-      <figure><img src="assets/img-187.jpg" alt="Shade on jute rope, wired" loading="lazy"><figcaption>Jute rope and wiring — the final hang</figcaption></figure>
+  <section class="tf-ch"><div class="tf-wrap">
+    <p class="tf-no">02 — Materials</p>
+    <h2 class="tf-h2">Three materials, one language</h2>
+    <div class="tf-copy">
+      <p class="tf-fact">Reading the parts<br>Weave, bark, grain —<br>three different logics</p>
+      <div class="tf-body"><p>Each part brings its own logic. The tokri is pure rhythm — thin slats woven over and under, strong because of the pattern, not the material. The branch is the opposite: no pattern at all, just whatever the tree decided, knots and all. The disc is the quiet one, a clean circle to stand everything on. My job was mostly to not ruin what each of them already does well.</p></div>
+    </div>
+    <figure class="tf-single"><img src="assets/img-183.jpg" alt="The finished lamp on a white background" loading="lazy"></figure>
+    <div class="tf-trio-cap">
+      <p class="tf-cap">The tokri — woven slats, strong by pattern</p>
+      <p class="tf-cap">The branch — no pattern, just the tree&rsquo;s decisions</p>
+      <p class="tf-cap">The disc — a clean circle to stand on</p>
     </div>
   </div></section>
 
-  <section class="chapter tokri-finale"><div class="wrap">
-    <div class="chapter-head"><span class="chapter-no">Chapter 05</span><h2>Light through the weave</h2></div>
-    <div class="case-copy"><div class="prose">
-      <p>This is what the tokri was always good for. Lit from inside, the weave stops being a basket and becomes a filter — every gap between the slats throws light onto the wall.</p>
-      <p>In a dark room it doesn't illuminate so much as glow. The cheapest shade in the house turned out to be the one that was never meant to be one.</p>
-    </div></div>
-    <figure class="pdf-image-block"><img src="assets/img-188.jpg" alt="The finished lamp standing, unlit" loading="lazy"><figcaption>The finished lamp, daytime</figcaption></figure>
-    <figure class="pdf-image-block"><img src="assets/img-179.jpg" alt="The lamp glowing in darkness" loading="lazy"><figcaption>Night — the weave doing the work</figcaption></figure>
+  <section class="tf-ch"><div class="tf-wrap">
+    <p class="tf-no">03 — Finish</p>
+    <h2 class="tf-h2">Stain</h2>
+    <div class="tf-copy">
+      <p class="tf-fact">One finish<br>Dark stain on<br>everything</p>
+      <div class="tf-body"></div>
+    </div>
+    <div class="tf-duo">
+      <figure><img src="assets/img-184.jpg" alt="Stain detail — branch, jute rope and shade" loading="lazy"></figure>
+      <figure><img src="assets/img-185.jpg" alt="Stain detail — branch bark close-up" loading="lazy"></figure>
+    </div>
+    <p class="tf-cap blk">After staining — one colour, one object</p>
   </div></section>
 
-  <footer class="system-foot"><span>© Faizan. All rights reserved.</span></footer>
+  <section class="tf-finale"><div class="tf-wrap">
+    <p class="tf-no">04 — Build</p>
+    <h2 class="tf-h2">Light through the weave</h2>
+    <div class="tf-copy">
+      <p class="tf-fact">Putting it together<br>Planted, hung,<br>wired — no visible<br>hardware</p>
+      <div class="tf-body"><p>This is what the tokri was always good for. Lit from inside, the weave stops being a basket and becomes a filter — every gap between the slats throws light onto the wall. In a dark room it doesn&rsquo;t illuminate so much as glow. The cheapest shade in the house turned out to be the one that was never meant to be one.</p></div>
+    </div>
+    <div class="tf-duo">
+      <figure><img src="assets/img-186.jpg" alt="The lamp on a wooden table" loading="lazy"></figure>
+      <figure><img src="assets/img-187.jpg" alt="The lamp by a window" loading="lazy"></figure>
+    </div>
+    <figure class="tf-wide"><img src="assets/img-179.jpg" alt="The lamp lit in a warm room" loading="lazy"></figure>
+    <figure class="tf-outdoor"><img src="assets/img-188.jpg" alt="The lamp outdoors in a dry field" loading="lazy"></figure>
+  </div></section>
+
+  <footer class="tf-foot"><div class="tf-wrap">
+    <p>© Faizan. All rights reserved.</p>
+    <p class="tf-wm">Tokri Lamp</p>
+  </div></footer>
   </div></template>
 
   <script>
@@ -1830,7 +1876,7 @@ Service access</div><div class="prose"><p>Software cannot fix the queue if the o
       {title:'eNav',type:'Digital Prototyping-II',year:'Project 03',hero:'assets/img-033.jpg',summary:'A handlebar navigation dial for bikers \u2014 where to turn, and nothing else. Distraction-free by design.',details:'Digital Prototyping-II\n(Automation Electronics and Coding)\nNID Haryana \u2014 Semester VI',guide:'Abhishek Dubey',slug:'enav'},
       {title:'KAAM',type:'Product + UI/UX + systems',year:'Project 08',hero:'assets/img-286.jpg',summary:'A direct-hire identity platform that gives India’s domestic and daily-wage workers a portable, verified reputation.',details:'Product + UI/UX + systems\nWorker kiosk + hirer app\nField research · prototyping · 3D',slug:'kaam'},
       {title:'Underroot',type:'Public furniture / Concrete + wood',year:'Project 04',hero:'assets/img-287.jpg',summary:'Multi-posture outdoor furniture developed through ergonomics, full-scale drawings and cast construction.',pages:pageRange(27,38)},
-      {title:'The Silver Gaunt',type:'Wearable / Metal craft',year:'Project 01',hero:'assets/img-288.jpg',summary:'An articulated metal gauntlet developed through joint studies, sheet-form trials and physical assembly.',pages:pageRange(3,8),slug:'silver-gaunt'},
+      {title:'The Silver Gaunt',type:'Wearable / Metal craft',year:'Project 05',hero:'assets/img-288.jpg',summary:'An articulated metal gauntlet developed through joint studies, sheet-form trials and physical assembly.',pages:pageRange(3,8),slug:'silver-gaunt'},
       {title:'ECHOES',type:'Print · Editorial',year:'Project 06',hero:'assets/img-150.jpg',summary:'A print magazine about Pink Floyd\'s psychedelic years — ten square pages where white light splits into colour.',slug:'echoes'},
       {title:'Single Barrel Rifle',type:'Workshop / Wood + metal',year:'Project 02',hero:'assets/img-048.jpg',summary:'A material exploration in teak and mild steel, shaped through full-scale workshop processes.',pages:pageRange(9,15)},
       {title:'NEST',type:'Product Design Concept',year:'Project 07',hero:'assets/img-147.jpg',summary:'A universal push-eject bulb holder that ends the B22 twist and E27 screw — push to lock, push again to release.',details:'Product Design Concept\nOct 2026\nOne holder · B22 + E27',slug:'pushclick'},
@@ -1844,8 +1890,8 @@ Service access</div><div class="prose"><p>Software cannot fix the queue if the o
       {index:3,no:'04',title:'Underroot',image:'assets/img-290.png'},
       {index:4,no:'05',title:'The Silver Gaunt',image:'assets/img-288.jpg'},
       {index:5,no:'06',title:'ECHOES',image:'assets/img-150.jpg',blurb:'A print magazine about Pink Floyd\'s psychedelic years — ten square pages where white light splits into colour.'},
-      {index:6,no:'07',title:'Replica of a single bolt action',image:'assets/img-048.jpg'},
-      {index:7,no:'08',title:'NEST',image:'assets/img-147.jpg',blurb:'One holder, one gesture — ends the B22 twist and E27 screw split.',confidential:true},
+      {index:6,no:'07',title:'Replica of a single bolt action',image:'assets/img-048.jpg',pending:true},
+      {index:7,no:'08',title:'NEST',image:'assets/img-147.jpg',blurb:'One holder, one gesture — ends the B22 twist and E27 screw split.'},
       {index:8,no:'09',title:'Tokri Lamp',image:'assets/img-179.jpg',blurb:'A table lamp from three found things — bamboo tokri, fallen branch, wood offcut.'}
     ];
     var confidentialContact='mailto:f4izan.archive@gmail.com?subject=Request%20to%20view%20NEST%20project';
@@ -1863,7 +1909,7 @@ Service access</div><div class="prose"><p>Software cannot fix the queue if the o
     }
     function caseProfile(p){
       var profiles={
-        'silver-gaunt':{kicker:'RESEARCH × BUILD COMPILATION',tagline:'ARTICULATED METAL GAUNTLET — <em>JOINT STUDIES, SHEET-FORM TRIALS, PHYSICAL ASSEMBLY</em>',meta:[['Project','01'],['Discipline','Wearable / Metal craft'],['Process','Research × build'],['Material','Sheet metal'],['Focus','Articulated joints'],['Designer','Faizan Haidri']]},
+        'silver-gaunt':{kicker:'RESEARCH × BUILD COMPILATION',tagline:'ARTICULATED METAL GAUNTLET — <em>JOINT STUDIES, SHEET-FORM TRIALS, PHYSICAL ASSEMBLY</em>',meta:[['Project','05'],['Discipline','Wearable / Metal craft'],['Process','Research × build'],['Material','Sheet metal'],['Focus','Articulated joints'],['Designer','Faizan Haidri']]},
         'enav':{kicker:'PROJECT 03 · DIGITAL PROTOTYPING-II',tagline:'A handlebar navigation dial for bikers — where to turn, and nothing else. <em>Distraction-free by design.</em>',meta:[['Project','03'],['Discipline','Digital Prototyping-II'],['Platform','ESP32 DevKit V1'],['Duration','3 weeks'],['Guide','Abhishek Dubey'],['Institution','NID Haryana']]},
         'echoes':{kicker:'06 / 06 · PRINT · EDITORIAL',tagline:'A 10-page print magazine about Pink Floyd’s psychedelic years — 1965 to 1972. Real archival photographs, real words from the band, and a design language that treats white paper the way Floyd treated silence — <em>as the thing the colour breaks out of.</em>',meta:[['Project','06'],['Discipline','Print · Editorial'],['Format','10 pages · 8 × 8 in'],['Print','300 dpi · CMYK'],['Type','Bodoni Moda · Source Serif 4 · IBM Plex Mono'],['Words','14 real quotations']]},
         'pushclick':{kicker:'07 / 07 · PRODUCT DESIGN CONCEPT · OCT 2026',tagline:'Universal push-eject bulb holder. <em>One gesture in, one gesture out.</em>',meta:[['Project','07'],['Spring','SS302 · k 1.3 N/mm'],['Rating','250 V / 2 A target'],['Contacts','Pogo pins · 3 A · Au-flash'],['Eject','8 mm · 8–12 N'],['Mount','Batten / pendant retrofit']]},
@@ -1899,7 +1945,7 @@ Service access</div><div class="prose"><p>Software cannot fix the queue if the o
         root=document.createElement('div');root.className='generic-comp';while(body.firstChild)root.appendChild(body.firstChild);body.appendChild(root)
       }
       root.classList.add('case-system-root');
-      if(root.classList.contains('tcp-comp'))return;
+      if(root.classList.contains('tcp-comp')||root.classList.contains('tokri-figma'))return;
       var hero=null,oldHeader=null;
       if(p.slug==='silver-gaunt'){oldHeader=root.querySelector('.silver-cover');hero=oldHeader.querySelector('.silver-hero')}
       else if(p.slug==='echoes'||p.slug==='kaam'){
